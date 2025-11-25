@@ -5,9 +5,9 @@
 ------------------------------------------------------------
 # Problem Statement
 In a fast-paced development environment, new features, bug fixes, and process changes are tracked via internal tickets (e.g., Jira, Trello). The burden of manually drafting, formatting, and publishing corresponding FAQ entries causes documentation to become outdated, leading to:
-    - Increased support costs (employees wasting time searching for answers).
-    - Delayed rollouts due to quality assurance bottlenecks.
-    - Risk of non-compliance if critical policy updates are missed.🎯 
+1. Increased support costs (employees wasting time searching for answers).
+2. Delayed rollouts due to quality assurance bottlenecks.
+3. Risk of non-compliance if critical policy updates are missed.🎯 
     
 # Solution & Core Concept
 The Wiki-Genie Agent System solves this by creating a structured, multi-step pipeline that automates content creation with mandatory Human-in-the-Loop (HITL) governance.
@@ -16,8 +16,8 @@ The agent's workflow ingests raw ticket data, intelligently drafts a technical d
 
 # Value Proposition
 The Wiki-Genie Agent provides quantifiable value by:
-    - Time Savings: Reducing the time spent by engineers and technical writers on manual drafting and formatting by an estimated 70%.
-    - Quality & Compliance: Ensuring all published content adheres to internal style guides and is vetted by a human reviewer before deployment.
+1. Time Savings: Reducing the time spent by engineers and technical writers on manual drafting and formatting by an estimated 70%.
+2. Quality & Compliance: Ensuring all published content adheres to internal style guides and is vetted by a human reviewer before deployment.
 
 ------------------------------------------------------------
 # 2. Implementation and Architecture 
@@ -52,13 +52,13 @@ The agent successfully handles a full cycle, including a conditional loop (Test 
 2. Drafting: The Draft Writer produces the formatted Markdown entry.
 3. HITL Pause: The Human Reviewer pauses the workflow and displays the draft.
 4. Conditional Routing:
-    # User Enters REJECTED: 
+    - User Enters REJECTED: 
     The graph loops back to the Draft Writer node for revision.
-    # User Enters APPROVED: 
+    - User Enters APPROVED: 
     The graph proceeds to the Final Publisher.
 5. Publishing: The agent saves the final, clean content to the mock file published_faq.md.
 
 # Final Artifact
 The final successful entry generated and published by the agent:
-File: published_faq.md
-Content: (A large, cleanly formatted Markdown entry on the new feature, complete with the required ### Overview section.)
+1. File: published_faq.md
+2. Content: (A large, cleanly formatted Markdown entry on the new feature, complete with the required ### Overview section.)
