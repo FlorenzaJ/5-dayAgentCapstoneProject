@@ -36,7 +36,7 @@ This project demonstrates proficiency in five (5) key agentic concepts from the 
 
 4. Tools (Custom Tool): A custom Python function, check_draft_format, is integrated as a tool. The writer's logic is implicitly guided by this tool to ensure the final output contains all required document headers (e.g., ### Overview).
 
-5. Sessions & Memory: The AgentState (TypedDict) acts as the shared session memory, preserving the full text of the original ticket, the LLM's first draft, and the human's approval status across the pause-and-resume cycle.
+5. Conditional Routing / Agent Evaluation: The workflow uses a conditional edge following the Human Reviewer. If the status is REJECTED, the graph loops the state back to the Draft Writer for a revision cycle.
 
 ------------------------------------------------------------
 # III. Execution and Demo
